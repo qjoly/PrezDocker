@@ -1,0 +1,11 @@
+version: '3'
+services:
+  builder-cyberprez:
+    build:
+        context: .
+        dockerfile: Dockerfile-Builder
+    image: docker.thoughtless.eu/kiko/cyberprez01
+    container_name: cyberprez01-builder
+    volumes:
+       - './:/data/'
+

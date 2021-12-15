@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cyberprez01:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: docker.thoughtless.eu/cyberprez/docker01
+    container_name: cyberprez01
+    ports:
+      - '4000:80'
+

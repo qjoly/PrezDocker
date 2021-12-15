@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+    cyberprez:
+        ports:
+            - '8070:8080'
+        image: cyberprez/docker

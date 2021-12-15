@@ -1,0 +1,5 @@
+FROM alpine
+WORKDIR /data
+RUN apk --no-cache add py3-pip python3-dev git
+RUN pip3 install git+https://git.thoughtless.eu/CyberPrez/markdown-slides.git
+CMD ["mdslides","CyberPrez.md","--include","img"]
