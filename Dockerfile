@@ -13,4 +13,4 @@ RUN apk update \
 
 COPY --from=builder /data/CyberPrez /var/www/localhost/htdocs
 
-CMD ["lighttpd","-D","-f","/etc/lighttpd/lighttpd.conf"]
+CMD echo "server.port = $PORT" | tee /etc/lighttpd/lighttpd.conf && lighttpd -D -f /etc/lighttpd/lighttpd.conf
