@@ -101,7 +101,7 @@ Une application complexe (serveur web, fichiers, base de donnée) s'installe don
 
 # Vous n'êtes pas perdu ? 
 
-On va passer donc passer au concret !
+On va donc passer au concret !
 
 [comment]: # (!!!)
 
