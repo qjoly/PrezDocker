@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-prezdocker
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    #    argocd.argoproj.io/sync-wave: "2"
+  labels:
+    version: 1
+spec:
+  selector:
+    matchLabels:
+      app: deploy-prezdocker
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: deploy-prezdocker
+    spec:
+      containers:
+      - name: prezdocker
+        image: thoughtlesshub/prezdocker
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          tcpSocket:
+            host: 127.0.0.1
+            port: 80
+          initialDelaySeconds: 180
+          periodSeconds: 3
+

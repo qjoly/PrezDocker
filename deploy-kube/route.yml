@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ir-prezdocker
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+  - match: Host(`docker.avec.une-tasse-de.cafe`)
+    kind: Rule
+    services:
+    - name: srvc-prezdocker
+      port: 80
+  tls:
+    certResolver: letsencrypt 
