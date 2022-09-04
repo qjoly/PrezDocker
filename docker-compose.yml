@@ -8,20 +8,3 @@ services:
     container_name: cyberprez01
     ports:
       - '4000:80'
-    networks:
-      - traefik-net
-    deploy:
-      replicas: 1
-      labels:
-        - "traefik.enable=true"
-        - "traefik.http.routers.cyberprez.entrypoints=secure"
-        - "traefik.http.routers.cyberprez.rule=Host(`docker.avec.une-tasse-de.cafe`)"
-        - "traefik.http.routers.cyberprez.tls.certresolver=letsencrypt"
-        - "traefik.http.services.cyberprez.loadbalancer.server.port=80"
-
-networks:
-  traefik-net:
-    external: true
-    driver: overlay
-    name: traefik-net
-
