@@ -4,7 +4,7 @@
 Site sous forme de diaporama permettant aux débutants de commencer à utiliser Docker. Cette présentation est destinée aux AdminSys cherchant un "Getting-Started" français et résumant les principes importants . 
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![Build Status](https://drone.thoughtless.eu/api/badges/CyberPrez/PrezDocker-01/status.svg)](https://drone.thoughtless.eu/CyberPrez/PrezDocker-01)
+[![Docker Image CI](https://github.com/QJoly/PrezDocker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/QJoly/PrezDocker/actions/workflows/docker-image.yml)
 
 ## Démarrer la présentation sur votre ordinateur
 
