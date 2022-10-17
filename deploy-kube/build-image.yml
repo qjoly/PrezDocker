@@ -5,8 +5,7 @@ metadata:
   labels: 
     version: 2
   annotations:
-    #    argocd.argoproj.io/sync-wave: "1"
-    argocd.argoproj.io/hook: PreSync 
+    argocd.argoproj.io/compare-options: IgnoreExtraneous 
 spec:
   containers:
   - name: kaniko
