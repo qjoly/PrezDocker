@@ -4,7 +4,7 @@ services:
     build:
         context: .
         dockerfile: Dockerfile
-    image: docker.thoughtless.eu/cyberprez/docker01
+    image: qjoly/prezdocker
     container_name: cyberprez01
     ports:
       - '4000:80'
