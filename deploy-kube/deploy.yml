@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: prezdocker
-        image: thoughtlesshub/prezdocker
+        image: qjoly/prezdocker
         imagePullPolicy: Always
         ports:
         - containerPort: 80
