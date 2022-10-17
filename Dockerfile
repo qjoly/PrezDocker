@@ -1,10 +1,10 @@
 FROM alpine as builder
 WORKDIR /data
 RUN apk --no-cache add py3-pip python3-dev git curl
-RUN pip3 install git+https://gitlab.com/da_doomer/markdown-slides.git
-COPY zenburn.min.css /usr/lib/python3.10/site-packages/mdslides/cdn-release/build/styles/zenburn.min.css
 COPY . .
-RUN mdslides CyberPrez.md --include img
+RUN pip3 install git+https://github.com/QJoly/markdown-slides@prezdocker
+COPY zenburn.min.css /usr/lib/python3.10/site-packages/mdslides/cdn-release/build/styles/zenburn.min.css
+RUN python3 -m mdslides CyberPrez.md --include img
 FROM alpine
 
 RUN apk update \
