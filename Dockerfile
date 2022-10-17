@@ -5,6 +5,7 @@ COPY . .
 RUN pip3 install git+https://github.com/QJoly/markdown-slides@prezdocker
 COPY zenburn.min.css /usr/lib/python3.10/site-packages/mdslides/cdn-release/build/styles/zenburn.min.css
 RUN python3 -m mdslides CyberPrez.md --include img
+RUN cp favicon.ico CyberPrez/favicon.ico
 FROM alpine
 
 RUN apk update \
