@@ -609,6 +609,6 @@ cette présentation pour continuer à propager Docker !
 
 Pour aller plus loin : 
 
-- [Docker Swarm](https://thebidouilleur.xyz/posts/DockerSwarm/) 
-- [CICD Via Docker](https://www.drone.io//)
+- [Docker Swarm](https://thebidouilleur.xyz/blog/presentation-docker-swarm) 
+- [CICD Via Docker](https://www.drone.io/)
  
