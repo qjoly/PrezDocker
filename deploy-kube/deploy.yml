@@ -4,7 +4,9 @@ metadata:
   name: deploy-prezdocker
   annotations:
     argocd.argoproj.io/hook: PostSync
-    #    argocd.argoproj.io/sync-wave: "2"
+    keel.sh/policy: force
+    keel.sh/trigger: poll
+    keel.sh/pollSchedule: "@every 3m"
   labels:
     version: 1
 spec:
