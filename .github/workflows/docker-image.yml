@@ -37,7 +37,7 @@ jobs:
          tags: qjoly/prezdocker:latest
       if: github.event_name != 'pull_request'
       
-    - name: Build only (PR)
+    - name: Build only on PR
       uses: docker/build-push-action@v3
       with:
          context: .
