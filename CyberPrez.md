@@ -21,13 +21,13 @@ CyberPrez #01 - Docker
 
 Le but de cette présentation est de faire découvrir Docker aux futurs utilisateurs. Il ne faut pas prendre cela pour un tutoriel dans un cadre professionnel.
 
-En revanche, n'hésitez pas à partager et m'envoyer vos questions. Je mettrai le site à jour si nécéssaire :)
+En revanche, n'hésitez pas à partager et m'envoyer vos questions. Je mettrai le site à jour si nécessaire :)
 
 [comment]: # (!!!)
 
 Mais avant de passer aux choses sérieuses :
 
-# Qu'est ce que Docker? 
+# Qu'est-ce que Docker ? 
 
 On va voir ça ensemble !
 
@@ -40,7 +40,7 @@ Docker est un système permettant de créer des conteneurs en y ajoutant une cou
 Il faut souvent comparer les conteneurs aux machines virtuelles pour comprendre. 
 
 
-Une machine virtuelle nécéssite de *simuler* des composants virtuels <br> *(processeur, mémoire, disque, carte réseau)* pour qu'elle soit totalement indépendante. 
+Une machine virtuelle nécessite de *simuler* des composants virtuels <br> *(processeur, mémoire, disque, carte réseau)* pour qu'elle soit totalement indépendante. 
 
 <br>
 Cela permet d'avoir une machine indépendante presque aussi libre qu'un système réel. 
@@ -48,7 +48,7 @@ Cela permet d'avoir une machine indépendante presque aussi libre qu'un système
 
 [comment]: # (|||)
 
-Un conteneur utilise la para-virtualisation, c.a.d. que l'on va virtualiser uniquement **certains** composants. 
+Un conteneur utilise la paravirtualisation, c.-à-d. que l'on va virtualiser uniquement **certains** composants. 
 
 Ainsi, les conteneurs sont moins polyvalents (car dépendants de l'hôte), mais permettent de créer des "pseudos" machines-virtuelles avec peu de ressources *(puisque les conteneurs utilisent les composants physiques de la machine hôte)*.
 
@@ -70,7 +70,7 @@ Une application complexe (serveur web, fichiers, base de donnée) s'installe don
 
 [comment]: # (!!! data-auto-animate)
 
-## à qui s'adresse Docker? 
+## à qui s'adresse Docker ? 
 - Aux developpeurs voulant simplifier la démarche d'installation de leurs programmes
 
 ![](img/code.svg)  <!-- .element: style="height:20vh; image-rendering: crisp-edges;" -->
@@ -81,7 +81,7 @@ Une application complexe (serveur web, fichiers, base de donnée) s'installe don
 
 [comment]: # (!!! data-auto-animate)
 
-## à qui s'adresse Docker? 
+## à qui s'adresse Docker ? 
 - Aux AdminSys voulant isoler les applications sur un même serveur (+ pour automatiser le déploiement d'une app)
 
 ![](img/adminsys.svg)  <!-- .element: style="height:20vh; image-rendering: crisp-edges;" -->
@@ -90,8 +90,8 @@ Une application complexe (serveur web, fichiers, base de donnée) s'installe don
 
 [comment]: # (!!! data-auto-animate)
 
-## à qui s'adresse Docker? 
-- Aux chefs de projets imposant un environnement proche du serveur de prod (ex: distribution, dépendances)
+## à qui s'adresse Docker ? 
+- Aux chefs de projets imposant un environnement proche du serveur de prod (ex : distribution, dépendances)
 
 ![](img/devops.svg)  <!-- .element: style="height:20vh; image-rendering: crisp-edges;" -->
 
@@ -108,15 +108,15 @@ On va donc passer au concret !
 # Résumé du moment 
 
 Ce qu'il faut retenir de cette partie : 
-- Un conteneur est une machine virtuelle plus légère, plus rapide, mais moins polyvalente <div style="font-size: 0.4em;"> du fait de la para-virtualisation </div>
+- Un conteneur est une machine virtuelle plus légère, plus rapide, mais moins polyvalente <div style="font-size: 0.4em;"> du fait de la paravirtualisation </div>
 
 [comment]: # (!!! data-auto-animate)
 
 # Résumé du moment 
 
 Ce qu'il faut retenir dans cette partie : 
-- Un conteneur est une machine virtuelle plus légère, plus rapide, mais moins polyvalente <div style="font-size: 0.4em;"> grâce à la para-virtualisation </div>
-- Docker permet d'installer une application facilement avec 1 commande <div style="font-size: 0.4em;"> car les conteneurs vont installer automatiquement la dite application </div>
+- Un conteneur est une machine virtuelle plus légère, plus rapide, mais moins polyvalente <div style="font-size: 0.4em;"> grâce à la paravirtualisation </div>
+- Docker permet d'installer une application facilement avec 1 commande <div style="font-size: 0.4em;"> car les conteneurs vont installer automatiquement ladite application </div>
 
 [comment]: # (!!! data-auto-animate)
  
@@ -126,20 +126,20 @@ Ce qu'il faut retenir dans cette partie :
 
 [comment]: # (!!! data-background-color="aquamarine")
 
-## Qu'est ce qu'une image?
+## Qu'est-ce qu'une image ?
 
-Une **image** est la base d'un conteneur. On appelle ça une image car elle est fixe, on ne peut la modifier. 
+Une **image** est la base d'un conteneur. On appelle ça une image, parce qu'elle est fixe, on ne peut la modifier. 
 Lorsqu'on démarre un conteneur, celui-ci va partir d'une image pour démarrer. 
 
-On peut donc résumer une image comme étant la base d'un conteneur Docker. 
+On peut alors résumer une image comme étant la base d'un conteneur Docker. 
 
  <div style="font-size: 0.6em;"> La suite, en bas </div>
 
 [comment]: # (||| data-background-color="aquamarine" data-auto-animate)
 
-## Qu'est ce qu'une image?
+## Qu'est-ce qu'une image ?
 
-L'image contient l'application qui sera lancée lorsqu'un conteneur démarre à partir de cette image. <br>
+L'image contient l'application qui sera lancée lorsqu'un conteneur commence à partir de cette image. <br>
 On peut aisément créer notre propre image. <br> *Nous verrons ça plus tard*.
 
 D'ailleurs l'aspect communautaire de Docker nous permet de récupérer les images d'autres personnes pour en faire des conteneurs.
@@ -155,7 +155,7 @@ Pour cela, nous allons parler de l'outil "Docker Build", qui repose sur des fich
 
 [comment]: # (||| data-background-color="aquamarine")
 
-Un Dockerfile est la "recette" pour créer une image. On choisi notre distribution comme 'couche de base', on y ajoute nos dépendances ainsi que les programmes nécéssaires au bon fonctionnement de l'application qu'on l'on souhaite dockeriser.
+Un Dockerfile est la "recette" pour créer une image. On choisit notre distribution comme 'couche de base', on y ajoute nos dépendances ainsi que les programmes nécessaires au bon fonctionnement de l'application qu'on l'on souhaite dockeriser.
 
 *Un exemple juste en dessous.*
 
@@ -168,7 +168,7 @@ FROM httpd:2.4
 RUN echo "Hello World" > /usr/local/apache2/htdocs/index.html 
 EXPOSE 80
 ```
-- Le FROM designe l'image de départ (qui sera téléchargée), on executera les commandes depuis celle-ci. 
+- Le FROM désigne l'image de départ (qui sera téléchargée), on exécutera les commandes depuis celle-ci. 
 
 [comment]: # (||| data-background-color="aquamarine" data-auto-animate)
 
@@ -180,7 +180,7 @@ FROM httpd:2.4
 RUN echo "Hello World" > /usr/local/apache2/htdocs/index.html 
 EXPOSE 80
 ```
-- Les instructions RUN permettent d'executer des commandes.
+- Les instructions RUN permettent d'exécuter des commandes.
 
 [comment]: # (||| data-background-color="aquamarine" data-auto-animate)
 
@@ -206,12 +206,12 @@ docker build -t exemple_nom_image .
 ### Sommes-nous obligé d'avoir une image pour lancer un conteneur ? 
 
 Réponse simple : Oui <br> 
-Mais.. il n'est pas obligatoire de créer l'image depuis un fichier Dockerfile ! 
-En écrivant la commande.. <br> 
+Mais… Il n'est pas obligatoire de créer l'image depuis un fichier Dockerfile ! 
+En écrivant la commande… <br> 
 ```bash 
 docker pull hello-world
 ```
-.. on récupère l'image depuis un serveur public nommé **DockerHub**. 
+… on récupère l'image depuis un serveur public nommé **DockerHub**. 
 Les images de "base" dans les Dockerfile proviennent d'ailleurs de ce registre public
 
  <div style="font-size: 0.5em;"> Question : <i>"est-ce possible d'utiliser DockerHub en tant qu'utilisateur?"</i> en bas </div>
@@ -236,7 +236,7 @@ docker pull linuxserver/booksonic
 
 [comment]: # (!!! data-background-color="aquamarine")
 
-## Résumé de la creation d'un conteneur
+## Résumé de la création d'un conteneur
 
 ![](img/docker_explains.png)
 
@@ -343,7 +343,7 @@ WORKDIR /data
 COPY run.py run.py
 CMD ["python3", "run.py"]
 ```
-- Nous définisons l'image debian:buster en tant qu'image par défaut. 
+- Nous définissons l'image debian:buster en tant qu'image par défaut. 
 
 <div style="font-size: 0.7em;"> Cela veut dire que nous partons d'une
 distribution Debian 10. <br> Nous aurions aussi pu choisir Ubuntu, Centos ou
@@ -365,7 +365,7 @@ CMD ["python3", "run.py"]
 - Installation des dépendances (Python, pip, et la librairie Bottle).
 
 
-*Le nécéssaire pour lancer notre programme !*
+*Le nécessaire pour lancer notre programme !*
 
 [comment]: # (||| data-background-color="#fab1a0" data-auto-animate)
 
@@ -380,7 +380,7 @@ WORKDIR /data
 COPY run.py run.py
 CMD ["python3", "run.py"]
 ```
-- On indique le port (optionnel) de sortie, pour accéder à l'application.
+- On indique le port (optionnel) de sortie pour accéder à l'application.
 *Nous le repréciserons durant le lancement du conteneur à partir de notre image*
 
 
@@ -397,7 +397,7 @@ WORKDIR /data
 COPY run.py run.py
 CMD ["python3", "run.py"]
 ```
-- Nous nous plaçons dans l'emplacement /data **dans le conteneur** et nous y envoyons le fichier **run.py** qui se trouve à coté du fichier Dockerfile.
+- Nous nous plaçons dans l'emplacement /data **dans le conteneur** et nous y envoyons le fichier **run.py** qui se trouve à côté du fichier Dockerfile.
 
  <div style="font-size: 0.6em;"> Comme le conteneur est isolé du systeme (et donc des fichiers), il faut envoyer manuellement chaque dossier / fichier. Nous verrons dans un autre cas qu'il est aussi possible d'échanger des fichiers en dehors de la création de l'image.</div>
 
@@ -421,7 +421,7 @@ CMD ["python3", "run.py"]
 
 ### Créer notre image à partir du Dockerfile 
 
-Votre Dockerfile est prêt, votre fichier run.py l'est aussi!<br>
+Votre Dockerfile est prêt, votre fichier run.py l'est aussi !<br>
 Maintenant, nous pouvons créer notre image. 
 <br>
 
@@ -436,7 +436,7 @@ cyberprez/docker sera le nom de notre image (vous pouvez modifier le nom à votr
 
 ### Créer un conteneur depuis notre image
 
-Maintenant que notre image est créée, vous pouvez démarrer un conteneur à partir de celle-ci. Voici la commande à utiliser : <br>
+À présent que notre image est créée, vous pouvez démarrer un conteneur à partir de celle-ci. Voici la commande à utiliser : <br>
 ```bash
 docker run -d -i cyberprez/docker
 ```
@@ -453,11 +453,11 @@ docker ps
 
 ![](img/dockerps.png)
 
-Le nom du conteneur sera différent, si on ne le précise pas manuellement car Docker va générer un nom aléatoire.
+Le nom du conteneur sera différent, si on ne le précise pas manuellement, car Docker va générer un nom aléatoire.
 
 [comment]: # (!!! data-background-color="#fab1a0")
 
-Mais nous n'avons pas accès au site de notre application Python ...
+Mais nous n'avons pas accès au site de notre application Python…
 
 [comment]: # (!!! data-background-color="#fab1a0")
 
@@ -472,7 +472,7 @@ Nous devons relancer notre conteneur en lui précisant ces paramètres !
 En utilisant `docker ps` (*comme sur la page 24.1*)
 Récuperez l'ID de votre conteneur, (*__1fa1502210e8__* dans mon cas).
 
-Arrêtez le et supprimez le comme dans l'exemple suivant : 
+Arrêtez-le et supprimez-le comme dans l'exemple suivant : 
 ```bash
 docker stop 1fa1502210e8
 docker rm 1fa1502210e8
@@ -489,7 +489,7 @@ de notre conteneur.
 docker run -d -p 8070:8080 -i cyberprez/docker
 ```
 
-Ainsi, le port 8070 *de notre machine* est relié au port 8080 *du conteneur*. 
+Ainsi, le port 8070 *de notre machine* est reliée au port 8080 *du conteneur*. 
 
 Nous aurions pu mettre le même port (8080:8080), vous êtes libre de choisir le port *de votre machine* (notre app utilise uniquement le port 8080 dans le conteneur)
 
@@ -504,7 +504,7 @@ Et tadaaaaa ! Votre site est disponible via l'URL : http://127.0.0.1:8070 !
  
 [comment]: # (!!! data-background-color="#fab1a0")
 
-### Qu'est ce que Docker-compose? 
+### Qu'est-ce que Docker-compose? 
 
 docker-compose est un moyen de remplacer une longue commande par un fichier.
 Par exemple, la commande suivante : 
@@ -526,7 +526,7 @@ Pour lancer notre conteneur, il suffira de faire `docker-compose up -d`
 
 [comment]: # (!!! data-background-color="#fab1a0")
 Si vous avez une erreur, c'est peut-être parce que le conteneur que vous aviez
-lancé juste avant est toujours actif, il vous faudra l'arreter. 
+lancé juste avant est toujours actif, il vous faudra l'arrêter. 
 
 Une fois la commande `docker-compose up -d`, vous remarquerez que votre site
 est de nouveau disponible !
@@ -546,12 +546,12 @@ Ainsi, en relançant le conteneur, il va se recréer à partir de la même image
 Les données sauvegardées sont donc supprimées ! 
 
 Un volume permet de garder ces fichiers sur votre système, et de les
-ré-injecter à la recréation du conteneur. 
+réinjecter à la recréation du conteneur. 
 
 [comment]: # (!!! data-background-color="#f1c40f")
 
 Au lieu de partir de 0, nous allons utiliser un conteneur sur DockerHub. 
-Prennons un exemple simple: Homer. 
+Prenons un exemple simple: Homer. 
 
 Homer est une application permettant de créer un petit "panel" pour afficher de nombreux liens sous forme de boutons.
 
@@ -611,4 +611,3 @@ Pour aller plus loin :
 
 - [Docker Swarm](https://thebidouilleur.xyz/blog/presentation-docker-swarm) 
 - [CICD Via Docker](https://www.drone.io/)
- 
