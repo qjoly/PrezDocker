@@ -610,4 +610,4 @@ cette présentation pour continuer à propager Docker !
 Pour aller plus loin : 
 
 - [Docker Swarm](https://thebidouilleur.xyz/blog/presentation-docker-swarm) 
-- [Garder ses images à jour](https://thebidouilleur.xyz/blog/cluster-maj/ )
+- [Garder ses images à jour]( https://thebidouilleur.xyz/blog/cluster-maj/ )
