@@ -12,6 +12,7 @@ Site sous forme de diaporama permettant aux débutants de commencer à utiliser 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 ![](https://img.shields.io/docker/pulls/qjoly/prezdocker?style=flat-square)
 [![Docker Image CI](https://github.com/QJoly/PrezDocker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/QJoly/PrezDocker/actions/workflows/docker-image.yml)
+![Nombre de visites](https://visitor-badge.deta.dev/badge?page_id=qjoly.prezdocker)
 
 ## Démarrer la présentation sur votre ordinateur
 
