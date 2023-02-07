@@ -1,4 +1,10 @@
 
+<p align="center">
+    <img src="https://avatars.githubusercontent.com/u/82603435?v=4" width="140px" alt="Helm LOGO"/>
+    <br>
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&pause=1000&width=435&lines=Les+bases+de+Docker;Docker+avec+une+tasse+de+caf%C3%A9" alt="Typing SVG" />
+</p>
+
 # CyberPrez - Docker
 
 Site sous forme de diaporama permettant aux débutants de commencer à utiliser Docker. Cette présentation est destinée aux AdminSys cherchant un "Getting-Started" français et résumant les principes importants . 
