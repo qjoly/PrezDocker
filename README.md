@@ -2,7 +2,7 @@
 <p align="center">
     <img src="https://avatars.githubusercontent.com/u/82603435?v=4" width="140px" alt="Helm LOGO"/>
     <br>
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&pause=1000&width=435&lines=Les+bases+de+Docker;Docker+avec+une+tasse+de+caf%C3%A9" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=Les+bases+de+Docker;Docker+avec+une+tasse+de+caf%C3%A9" alt="Typing SVG" />
 </p>
 
 # CyberPrez - Docker
