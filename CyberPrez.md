@@ -597,10 +597,11 @@ conserver si jamais on relance le conteneur !
 Maintenant, vous savez créer un conteneur Docker à partir d'une image que vous avez elle-même créée... ou récupérée depuis internet. Vous savez également conserver vos fichiers de configuration qui seront essentiels pour la sauvegarde ou la migration de votre conteneur. 
 
 Félicitation, vous avez tenu jusqu'au bout ! Ces compétences vous serviront dans de nombreux domaines.
+
 [comment]: # (!!!) 
 
-Libre à vous d'expérimenter et de continuer à apprendre autour de Docker ! 
-J'espère que vous aurez appris de nombreuses choses ! 
+Libre à vous d'expérimenter et de continuer à apprendre autour de Docker ! <br>
+J'espère que vous aurez appris de nombreuses choses ! <br>
 N'hésitez pas à m'envoyer vos questions ou remarques et à partager cette présentation pour continuer à propager Docker ! 
 
 [comment]: # (!!!)
