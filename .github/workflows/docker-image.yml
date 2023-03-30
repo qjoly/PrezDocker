@@ -46,6 +46,3 @@ jobs:
          tags: qjoly/prezdocker
       if: github.event_name == 'pull_request'    
    
-    - uses: rickstaa/action-create-tag@v1
-      with:
-         tag: ${{github.run_number}}
