@@ -7,4 +7,4 @@ services:
     image: qjoly/prezdocker
     container_name: cyberprez01
     ports:
-      - '4000:80'
+      - '8080:80'
