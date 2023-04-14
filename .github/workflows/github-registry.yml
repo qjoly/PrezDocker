@@ -1,0 +1,26 @@
+name: Push to Github registry
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v3
+        
+     - name: Log in to the Container registry
+       uses: docker/login-action@ec9cdf07d570632daeb912f5b2099cb9ec1d01e6
+       with:
+         registry: ghcr.io
+         username: ${{ github.actor }}
+         password: ${{ secrets.GITHUB_TOKEN }}
+
+     - name: Build and push Docker image
+       uses: docker/build-push-action@v4
+       with:
+         context: .
+         push: true
+         tags: ghcr.io/qjoly/prezdocker
