@@ -506,12 +506,13 @@ Par exemple, la commande suivante :
 docker run -d -p 8070:8080 -i cyberprez/docker
 ```
 
-Devient le fichier : 
+Devient le fichier `docker-compose.yml`: 
 
 ```yml
 version: '3.3'
 services:
     cyberprez:
+        build: .
         ports:
             - '8070:8080'
         image: cyberprez/docker
